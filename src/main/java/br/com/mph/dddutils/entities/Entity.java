@@ -1,8 +1,9 @@
 package br.com.mph.dddutils.entities;
 
+import br.com.mph.dddutils.BusinessObject;
 import br.com.mph.ddutils.identities.Identity;
 
-public abstract class Entity<T extends Identity> {
+public abstract class Entity<T extends Identity> extends BusinessObject{
 	
 	private T id;
 
