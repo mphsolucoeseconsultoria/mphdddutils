@@ -11,9 +11,14 @@ import br.com.mph.ddutils.identities.Identity;
 
 @SuppressWarnings("rawtypes")
 public abstract class PersistentEntity<T extends Identity> extends Entity implements Serializable {
-		
+
+	protected PersistentEntity(Class clazz) {
+		super(clazz);
+		// TODO Auto-generated constructor stub
+	}
+
 	private static final long serialVersionUID = 4130447696994578239L;
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int databaseId;
@@ -21,5 +26,5 @@ public abstract class PersistentEntity<T extends Identity> extends Entity implem
 	public int getDatabaseId() {
 		return databaseId;
 	}
-	
+
 }
