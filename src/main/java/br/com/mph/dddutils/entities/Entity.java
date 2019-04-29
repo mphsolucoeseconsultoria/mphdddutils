@@ -7,6 +7,10 @@ import br.com.mph.mphutils.exceptions.MphUtilsRuntimeException;
 public abstract class Entity<T extends Identity> extends BusinessObject{
 
 	private T id;
+	
+	protected Entity() {
+		super();		
+	}
 
 	@SuppressWarnings("unchecked")
 	protected Entity(Class<T> clazz) {

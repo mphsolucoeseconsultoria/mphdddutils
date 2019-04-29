@@ -11,6 +11,10 @@ import br.com.mph.ddutils.identities.Identity;
 
 @SuppressWarnings("rawtypes")
 public abstract class PersistentEntity<T extends Identity> extends Entity implements Serializable {
+	
+	PersistentEntity() {
+		super();
+	}
 
 	protected PersistentEntity(Class<T> clazz) {
 		super(clazz);
