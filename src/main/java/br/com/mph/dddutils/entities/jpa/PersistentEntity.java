@@ -27,7 +27,7 @@ public abstract class PersistentEntity<T extends Identity> extends Entity implem
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int dbId;
 
-	public int getDatabaseId() {
+	public int getDbId() {
 		return dbId;
 	}
 
