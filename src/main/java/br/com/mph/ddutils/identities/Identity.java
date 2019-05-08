@@ -3,19 +3,11 @@ package br.com.mph.ddutils.identities;
 import java.io.Serializable;
 import java.util.UUID;
 
-public abstract class Identity<T extends Identity> implements Serializable {
+public abstract class Identity implements Serializable {
 
 	private static final long serialVersionUID = -857432151835992006L;
 
-	private UUID id;
-
-	public UUID getId() {
-		return id;
-	}
-
-	public Identity(){
-		id = UUID.randomUUID();
-	}
+	public abstract UUID getId();
 
 	@Override
 	public int hashCode() {
@@ -35,7 +27,7 @@ public abstract class Identity<T extends Identity> implements Serializable {
 			return false;
 		}
 
-		Identity<T> other = (Identity<T>) obj;
+		Identity other = (Identity) obj;
 
 		return this.getId().equals(other.getId());
 	}
